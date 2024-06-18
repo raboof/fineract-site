@@ -1,0 +1,10 @@
+## 
+
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{HTTP_HOST} ^(www\.)?fineract.incubator.apache.org$
+RewriteRule ^/?(.*)$ https://fineract.apache.org/$1 [L,R=301]
+
+
+ErrorDocument 404 /404.html
